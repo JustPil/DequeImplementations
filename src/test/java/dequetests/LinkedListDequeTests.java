@@ -78,8 +78,8 @@ public class LinkedListDequeTests {
     public void dequeueRearOnEmptyDeque() {
         Assertions.assertThrows(RuntimeException.class, deque::dequeueRear);
     }
-    @Test
 
+    @Test
     public void getDequeElementsAsString() {
         deque.enqueueFront(2);
         deque.enqueueRear(3);
@@ -87,16 +87,16 @@ public class LinkedListDequeTests {
         var result = deque.toString();
         Assertions.assertEquals("[1 2 3]", result);
     }
-    @Test
 
+    @Test
     public void removeAnElement() {
         deque.enqueueFront(1);
         deque.remove(1);
         var result = deque.size();
         Assertions.assertEquals(0, result);
     }
-    @Test
 
+    @Test
     public void removeMultipleElements() {
         for(int i = 0; i < 5; i++) {
             deque.enqueueFront(i);
@@ -105,8 +105,8 @@ public class LinkedListDequeTests {
         var result = deque.size();
         Assertions.assertEquals(0, result);
     }
-    @Test
 
+    @Test
     public void swapTwoFrontElements() {
         for(int i = 0; i < 5; i++) {
             deque.enqueueFront(i + 1);
@@ -115,7 +115,7 @@ public class LinkedListDequeTests {
         var result = deque.dequeueFront();
         Assertions.assertEquals(4, result);
     }
-    
+
     @Test
     public void swapTwoRearElements() {
         for(int i = 0; i < 5; i++) {
